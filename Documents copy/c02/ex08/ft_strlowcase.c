@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerazo-c <eerazo-c@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 12:34:13 by eerazo-c          #+#    #+#             */
-/*   Updated: 2023/07/26 14:35:41 by eerazo-c         ###   ########.fr       */
+/*   Created: 2023/07/26 14:33:06 by eerazo-c          #+#    #+#             */
+/*   Updated: 2023/07/26 14:36:46 by eerazo-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str -= 32;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str += 32;
 		i++;
 	}
 	return (str);
