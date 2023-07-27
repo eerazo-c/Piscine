@@ -5,16 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerazo-c <eerazo-c@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 14:55:56 by eerazo-c          #+#    #+#             */
-/*   Updated: 2023/07/27 12:19:27 by eerazo-c         ###   ########.fr       */
+/*   Created: 2023/07/27 18:32:35 by eerazo-c          #+#    #+#             */
+/*   Updated: 2023/07/27 18:33:51 by eerazo-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
 int	ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 == *s2 && *s1)
+	while (*s1 && *s2)
 	{
+		if (*s1 > *s2)
+		{
+			return (1);
+		}
+		else if (*s1 < *s2)
+		{
+			return (-1);
+		}
 		s1++;
 		s2++;
 	}

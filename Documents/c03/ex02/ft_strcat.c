@@ -5,27 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerazo-c <eerazo-c@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 12:25:14 by eerazo-c          #+#    #+#             */
-/*   Updated: 2023/07/27 12:56:40 by eerazo-c         ###   ########.fr       */
+/*   Created: 2023/07/27 18:37:29 by eerazo-c          #+#    #+#             */
+/*   Updated: 2023/07/27 18:45:06 by eerazo-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
 char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
-	int	j;
+	char	*destcopy;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	destcopy = dest;
+	while (*dest)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (destcopy);
 }
